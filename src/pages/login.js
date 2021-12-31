@@ -32,6 +32,7 @@ const Login = () => {
     return (
         <div className="container flex mx-auto max-w-screen-md items-center justify-center h-screen">
             <div className="flex w-2/5">
+                whats good my dude
                 <img src="/images/iphone-with-profile.jpg" alt="iphone with Tafoo app" className="max-w-full"/>
             </div>
 
