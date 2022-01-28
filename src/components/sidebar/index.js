@@ -10,8 +10,8 @@ export default function Sidebar() {
     user: { docId = '', fullName, username, userId, following } = {} } = useContext(LoggedInUserContext);
   //--------------
   return (
-    <div className="relative p-4">
-      <div className="fixed">
+    <div className="hidden md:block">
+      <div className="fixed pr-4">
         <User username={username} fullName={fullName} />
         <Suggestions userId={userId} following={following} loggedInUserDocId={docId} />
       </div>

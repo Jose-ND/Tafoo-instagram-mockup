@@ -6,8 +6,8 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 const Photos = ({photos}) => {
     return (
-        <div className="h-16 border-t border-gray-primary mt-12 pt-4">
-            <div className="grid grid-cols-3 gap-8 mt-4 mb-12">
+        <div className="h-16 border-t border-gray-primary mt-12 px-4 lg:px-0">
+            <div className="grid grid-cols-3 mt-4 mb-12 gap-2 md:gap-8">
                 {!photos ? (
                     <>
                         <Skeleton count={12} width={320} height={400} />
@@ -15,7 +15,9 @@ const Photos = ({photos}) => {
                 ) : photos.length > 0 ? (
                         photos.map((photo) => (
                             <div key={photo.docId} className="relative group">
-                                <img src={photo.imageSrc} alt={photo.caption} />
+                                {/* img tag below has complications when you try to resize square img to
+                                rectangle img at media query break point*/}
+                                <img src={photo.imageSrc} alt={photo.caption} className="w-auto square object-cover object-center"/>
                                 <div className="absolute bottom-0 left-0 bg-gray-200 z-10 w-full 
                                     justify-evenly items-center h-full bg-black-faded group-hover:flex hidden cursor-pointer">
                                         <p className="flex items-center text-white font-bold">

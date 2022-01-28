@@ -6,7 +6,6 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "cypress": "^9.2.0",
     "date-fns": "^2.27.0",
     "firebase": "^8.10.0",
     "prop-types": "^15.7.2",
@@ -23,13 +22,37 @@
     "react-scripts:start": "sleep 5 && react-scripts start",
     "start": "run-p watch:css react-scripts:start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watchAll",
+    "e2e": "cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!<rootDir>/src/App.js",
+      "!<rootDir>/src/index.js",
+      "!<rootDir>/src/seed.js",
+      "!<rootDir>/src/fixtures/*.js",
+      "!<rootDir>/src/hooks/*.js",
+      "!<rootDir>/src/helpers/*.js",
+      "!<rootDir>/src/services/firebase.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "html",
+      "text"
     ]
   },
   "browserslist": {
@@ -48,6 +71,7 @@
     "@welldone-software/why-did-you-render": "^6.2.3",
     "autoprefixer": "^10.4.0",
     "babel-eslint": "^10.1.0",
+    "cypress": "^9.3.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^19.0.2",
     "eslint-config-prettier": "^7.2.0",

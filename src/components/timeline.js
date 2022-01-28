@@ -45,7 +45,7 @@ export default function Timeline() {
  
 
   return (
-    <div className="container col-span-2">
+    <div className="col-span-3 md:col-span-2">
         {!photos ? (
             <Skeleton count={2} width={640} height={500} className="mb-5"/>
         ) : photos?.length > 0 ? (

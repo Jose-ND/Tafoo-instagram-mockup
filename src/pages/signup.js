@@ -62,13 +62,13 @@ const Signup = () => {
     }, []);
 
     return (
-        <div className="container flex mx-auto max-w-screen-md items-center justify-center h-screen">
-            <div className="flex w-2/5">
+        <div className="container flex mx-auto max-w-screen-md items-center justify-center h-screen px-4 lg:px-0">
+            {/* <div className="flex w-2/5">
                 <img src="/images/iphone-with-profile.jpg" alt="iphone with Tafoo app" className="max-w-full"/>
-            </div>
+            </div> */}
 
-            <div className="flex flex-col w-2/5">
-                <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
+            <div className="flex flex-col lg:w-2/5 justify-center h-full max-w-md m-auto">
+                <div className="flex flex-col items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-fuchsia-500 p-4 border border-gray-primary mb-4 rounded-md shadow-md">
                     <h1 className="flex justify-center w-full">
                         <img src="/images/logo.png" alt="Tafoo" className="mt-2 w-6/12 mb-4" />
                     </h1>
@@ -104,7 +104,7 @@ const Signup = () => {
                         <input
                             aria-label="Enter your passoword"
                             type="password"
-                            placeholder="passoword"
+                            placeholder="Password"
                             className="text-sm text-gray-base w-full mr-3 py-5 px-4 h-2 
                             border border-gray-primary rounded mb-2"
                             onChange={({ target }) => setPassword(target.value)}
@@ -113,16 +113,16 @@ const Signup = () => {
                         <button
                             disability={isInvalid}
                             type="submit"
-                            className={`bg-blue-medium w-full rounded h-8 font-bold text-white ${isInvalid && 'opacity-50'}`}
+                            className={`bg-gray-background w-full rounded h-8 font-bold text-purple-500 ${isInvalid && 'opacity-50'}`}
                         >
                             Sign Up
                         </button>
                     </form>
                 </div>
-                <div className="flex justify-center items-center flex-col w-full bg-white p-4 border border-gray-primary rounded">
+                <div className="flex justify-center items-center flex-col w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-fuchsia-500 p-4 border border-gray-primary rounded-md shadow-md">
                     <p className="text-sm">
                         Have an account?{` `}
-                        <Link to={ROUTES.LOGIN} className="font-bold text-blue-medium">
+                        <Link to={ROUTES.LOGIN} className="font-bold text-purple-800">
                             Login
                         </Link>
                     </p>

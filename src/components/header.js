@@ -18,7 +18,8 @@ const Header = () => {
 
 
     return (
-       <header className="h-16 bg-white border-b border-gray-primary mb-8">
+    //    <header className="h-16 bg-white border-b border-gray-primary mb-8">
+       <header className="h-16 mb-8 shadow-md px-4 lg:px-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-fuchsia-500">
             <div className="container mx-auto max-w-screen-lg h-full">
                 <div className="flex justify-between h-full">
                     <div className="text-gray-700 text-center flex items-center align-items cursor-pointer">
@@ -33,7 +34,7 @@ const Header = () => {
                             <>
                                 <Link to={ROUTES.DASHBOARD} aria-label="Dashboard">
                                     <svg xmlns="http://www.w3.org/2000/svg" 
-                                        className="mr-6 w-8" 
+                                        className="mr-6 w-8 text-white" 
                                         fill="none" 
                                         viewBox="0 0 24 24" 
                                         stroke="currentColor"
@@ -64,7 +65,7 @@ const Header = () => {
                                 >
                                 <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
-                                className="w-8 mr-6" 
+                                className="w-8 mr-0 lg:mr-6 text-white" 
                                 fill="none" 
                                 viewBox="0 0 24 24" 
                                 stroke="currentColor"
@@ -77,7 +78,7 @@ const Header = () => {
                                     />
                                 </svg>
                                 </button>
-                                {user && <div className="flex items-center cursor-pointer">
+                                {user && <div className="hidden lg:flex rounded-full border-2 border-white items-center cursor-pointer">
                                     <Link to={`/p/${user?.username}`}>
                                         <img 
                                             src={`/images/avatars/${user?.username}.jpg`} 
@@ -91,7 +92,7 @@ const Header = () => {
                                 <Link to={ROUTES.LOGIN}>
                                     <button 
                                     type="button"
-                                    className="bg-blue-medium font-bold text-sm rounded text-white w-20 h-8"
+                                    className="bg--medium font-bold text-sm rounded text-white w-20 h-8"
                                     >
                                         Log In
                                     </button>
@@ -99,7 +100,7 @@ const Header = () => {
                                 <Link to={ROUTES.SIGN_UP}>
                                     <button 
                                     type="button"
-                                    className="font-bold text-sm rounded text-blue-medium w-20 h-8"
+                                    className="font-bold text-sm rounded text-white w-20 h-8"
                                     >
                                         Sign Up
                                     </button>

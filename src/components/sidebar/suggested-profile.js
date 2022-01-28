@@ -29,7 +29,7 @@ const SuggestedProfile = ({ profileDocId, username, profileId, userId, loggedInU
             </div>
             <div>
                 <button 
-                    className="text-xs font-bold text-blue-medium"
+                    className="text-xs font-bold text-purple-500 hover:text-purple-800 transition ease-out duration-100"
                     type="button"
                     onClick={handleFollowUser}
                 >
