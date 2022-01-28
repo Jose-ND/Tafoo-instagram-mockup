@@ -107,9 +107,9 @@ export default function Header({
     return (
         <div className="grid grid-cols-3 gap-4 justify-between mx-auto max-w-screen-lg">
             <div className="container flex justify-center items-center">
-                {profileUsername ? ( /////---------right here
+                {profileUsername ? (
                 <img
-                    className="rounded-full h-16 w-16 md:h-20 md:w-20 lg:h-40 lg:w-40 flex"
+                    className="rounded-full h-16 w-16 sm:h-40 sm:w-40 flex"
                     alt={`${fullName} profile picture`}
                     src={`/images/avatars/${profileUsername}.jpg`}
                     onError={(e) => {
@@ -128,7 +128,7 @@ export default function Header({
                     ) : (
                     activeBtnFollow && (
                     <button
-                    className="bg-blue-medium font-bold text-sm rounded text-white w-20 h-8"
+                    className="bg-purple-500 font-bold text-sm rounded text-white w-20 h-8"
                     type="button"
                     onClick={handleToggleFollow}
                     onKeyDown={(event) => {
